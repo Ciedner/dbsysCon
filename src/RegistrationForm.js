@@ -1,0 +1,100 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import 'bootstrap/dist/css/bootstrap.css';
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBInput,
+  MDBIcon,
+  MDBCheckbox
+}
+from 'mdb-react-ui-kit';
+
+const RegistrationForm = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const registrationData = {
+      username,
+      password,
+      email,
+    };
+  
+    axios.post("/api/register", registrationData)
+      .then((response) => {
+        console.log(response.data);
+        // Handle success, e.g., show a success message to the user
+      })
+      .catch((error) => {
+        console.error(error);
+        // Handle error, e.g., show an error message to the user
+      });
+  };
+
+  return (
+    <div>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="container">
+          <Link className="navbar-brand" to="/">SpotWise Parking Management System</Link>
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link" to="/registration">Registration</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/login">Login</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/">Home</Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <MDBContainer fluid>
+        <MDBCard className='text-black m-5' style={{borderRadius: '25px'}}>
+          <MDBCardBody>
+            <MDBRow>
+              <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
+                <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+                <div className="d-flex flex-row align-items-center mb-4 ">
+                  <MDBIcon fas icon="user me-3" size='lg'/>
+                  <MDBInput label='Your Name' id='form1' type='text' className='w-100' value={username} onChange={(e) => setUsername(e.target.value)} />
+                </div>
+                <div className="d-flex flex-row align-items-center mb-4">
+                  <MDBIcon fas icon="envelope me-3" size='lg'/>
+                  <MDBInput label='Your Email' id='form2' type='email' value={email} onChange={(e) => setEmail(e.target.value)} />
+                </div>
+                <div className="d-flex flex-row align-items-center mb-4">
+                  <MDBIcon fas icon="lock me-3" size='lg'/>
+                  <MDBInput label='Password' id='form3' type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                </div>
+                <div className="d-flex flex-row align-items-center mb-4">
+                  <MDBIcon fas icon="key me-3" size='lg'/>
+                  <MDBInput label='Repeat your password' id='form4' type='password' />
+                </div>
+                <div className='mb-4'>
+                  <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Accept terms and conditions' />
+                </div>
+                <MDBBtn className='mb-4' size='lg' onClick={handleSubmit}>Register</MDBBtn>
+              </MDBCol>
+              <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
+                <MDBCardImage src='https://cdn.luxe.digital/media/20230103133024/most-expensive-cars-2023-list-luxe-digital.jpg' fluid/>
+              </MDBCol>
+            </MDBRow>
+          </MDBCardBody>
+        </MDBCard>
+      </MDBContainer>
+    </div>
+  );
+};
+
+export default RegistrationForm;
