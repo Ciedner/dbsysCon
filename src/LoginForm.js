@@ -10,7 +10,7 @@ import {
 
 function LoginForm() {
   const backgroundStyle = {
-    backgroundImage: 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtrBNP961073ERzM0chDf1XMKTomZLt9LaaSmPBI3pbSImPz2JN7J8EII6UedQPCGcp88&usqp=CAU")',
+    backgroundImage: 'url("https://hips.hearstapps.com/hmg-prod/images/2022-rolls-royce-ghost-black-badge-105-16gg-1643905036.jpeg")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '100vh',
