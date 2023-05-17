@@ -4,12 +4,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 const HomePage = () => {
   const backgroundStyle = {
-    backgroundImage: 'url("https://scontent.fceb1-2.fna.fbcdn.net/v/t1.15752-9/265217446_490335995774956_6522722874612852499_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeG6HcLFLk2nsUUDyZJURFvgEgtrk7weHFYSC2uTvB4cVspzVaBnqqbsuAqRayMIT4sKuUj39fgP317KVlpXQ0vW&_nc_ohc=UsQ820iVuKEAX9yrxUs&_nc_ht=scontent.fceb1-2.fna&oh=03_AdT8OL1hwj7DfKw3b2GnfmpOBBKWgsRIK3c1FLJUEov24g&oe=648BE745")',
+    backgroundImage: 'url("https://hips.hearstapps.com/hmg-prod/images/p90475606-highres-rolls-royce-phantom-1677268219.jpg?crop=0.663xw:0.496xh;0.136xw,0.372xh&resize=1200:*")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '100vh',
     backgroundColor: 'yellow',
   };
+  
 
   const textStyle = {
     fontWeight: 'bold',
