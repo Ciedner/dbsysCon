@@ -10,7 +10,7 @@ import {
 
 function LoginForm() {
   const backgroundStyle = {
-    backgroundImage: 'url("https://scontent.fceb1-1.fna.fbcdn.net/v/t1.15752-9/286026868_1058337681766182_6426244544376992141_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHN_HxXQ10fcvMhlrci_OnIUjbqZeYwNJdSNupl5jA0l9h7TequazXHthZndcXLPLqFDlCO5O9XMbv0Sty-lysx&_nc_ohc=HHIRkPpVY80AX_beOMW&_nc_ht=scontent.fceb1-1.fna&oh=03_AdQGSQBPO2sjuWlU2hkpyGnKFspkWRjBwRh65aUXrI5Tcw&oe=648C119A")',
+    backgroundImage: 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtrBNP961073ERzM0chDf1XMKTomZLt9LaaSmPBI3pbSImPz2JN7J8EII6UedQPCGcp88&usqp=CAU")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '100vh',
