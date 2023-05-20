@@ -4,8 +4,8 @@ import HomePage from "./HomePage";
 import RegistrationPage from "./RegistrationPage";
 import LoginPage from "./LoginPage";
 
+
 const App = () => {
-  
   return (
     <Router>
       <Routes>
